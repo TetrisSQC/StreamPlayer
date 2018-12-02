@@ -1,0 +1,75 @@
+object StreamPlayerForm: TStreamPlayerForm
+  Left = 393
+  Height = 450
+  Top = 215
+  Width = 800
+  Caption = 'StreamPlayer'
+  Constraints.MinHeight = 225
+  Constraints.MinWidth = 400
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.0.0.2'
+  object ActionList1: TActionList
+    left = 18
+    top = 8
+    object aClose: TAction
+      Caption = 'aClose'
+      OnExecute = aCloseExecute
+      ShortCut = 27
+    end
+    object aPauseResume: TAction
+      Caption = 'aPauseResume'
+      OnExecute = aPauseResumeExecute
+      ShortCut = 16416
+    end
+    object aMute: TAction
+      Caption = 'aMute'
+      OnExecute = aMuteExecute
+      ShortCut = 32
+    end
+    object aSelect: TAction
+      Caption = 'aSelect'
+      OnExecute = aSelectExecute
+      ShortCut = 13
+    end
+    object aLeft: TAction
+      Caption = 'aLeft'
+      OnExecute = aLeftExecute
+      ShortCut = 37
+    end
+    object aRight: TAction
+      Caption = 'aRight'
+      OnExecute = aRightExecute
+      ShortCut = 39
+    end
+    object aDown: TAction
+      Caption = 'aDown'
+      OnExecute = aDownExecute
+      ShortCut = 40
+    end
+    object aUp: TAction
+      Caption = 'aUp'
+      OnExecute = aUpExecute
+      ShortCut = 38
+    end
+    object aShowWin: TAction
+      Caption = 'aShowWin'
+      OnExecute = aShowWinExecute
+      ShortCut = 16424
+    end
+    object aShowMax: TAction
+      Caption = 'aShowMax'
+      OnExecute = aShowMaxExecute
+      ShortCut = 16422
+    end
+  end
+  object tmrLoad: TTimer
+    Enabled = False
+    Interval = 50
+    OnTimer = tmrLoadTimer
+    left = 107
+    top = 59
+  end
+end

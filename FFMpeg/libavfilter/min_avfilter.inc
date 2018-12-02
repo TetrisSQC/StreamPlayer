@@ -1,0 +1,2 @@
+type
+ PAVFilterContext=Pointer;
